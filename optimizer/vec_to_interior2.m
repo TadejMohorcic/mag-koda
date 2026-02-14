@@ -1,7 +1,7 @@
-function [bx, by] = vec_to_interior(Bx, By, v)
+function [bx, by] = vec_to_interior2(Bx, By, v)
 
 n = size(Bx, 1);
-interior_size = (n-2)*(n-3) / 2;
+interior_size = (n-3)*(n-4) / 2;
 
 vx = v(1:interior_size);
 vy = v(interior_size+1:end);
@@ -11,7 +11,7 @@ by = By;
 
 index = 1;
 for i = 2:n
-    for j = 2:n-i
+    for j = 3:n-i
         bx(j, i) = vx(index);
         by(j, i) = vy(index);
         index = index + 1;

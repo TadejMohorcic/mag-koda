@@ -7,4 +7,5 @@ J = calculate3_jacobi(bx, by, U);
 eps = 1e-5;
 c = eps - J;
 ceq = [];
+
 end
